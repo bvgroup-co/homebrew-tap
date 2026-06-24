@@ -1,6 +1,6 @@
 # Homebrew Tap
 
-Homebrew formulas for BVGroup CLI tools.
+Homebrew formulas for BVGroup command-line tools.
 
 ## Install lnk
 
