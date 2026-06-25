@@ -1,4 +1,4 @@
-class Lnk < Formula
+class LinkedinLnk < Formula
   desc "Fast LinkedIn CLI for posting, reading, and messaging"
   homepage "https://github.com/bvgroup-co/lnk"
   version "0.1.0-bvgroup.2"

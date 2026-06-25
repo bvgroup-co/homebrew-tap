@@ -2,11 +2,11 @@
 
 Homebrew formulas for BVGroup command-line tools.
 
-## Install lnk
+## Install LinkedIn lnk
 
 ```sh
 brew tap bvgroup-co/tap
-brew install lnk
+brew install linkedin-lnk
 ```
 
 After installation, verify the binary is available:
