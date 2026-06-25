@@ -1,26 +1,26 @@
 class LinkedinLnk < Formula
   desc "Fast LinkedIn CLI for posting, reading, and messaging"
   homepage "https://github.com/bvgroup-co/lnk"
-  version "0.1.0-bvgroup.7"
+  version "0.1.0-bvgroup.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.7/lnk_0.1.0-bvgroup.7_darwin_arm64.tar.gz"
-      sha256 "e7f58d8aef2eb64219a2c727f7cc289a5a88efec9e96328a2b91b5b4d9e837a3"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.8/lnk_0.1.0-bvgroup.8_darwin_arm64.tar.gz"
+      sha256 "91d959a1f5e4bebda85859652fc43b94a6c2bc059017922c32d186c21fd962d5"
     else
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.7/lnk_0.1.0-bvgroup.7_darwin_amd64.tar.gz"
-      sha256 "ea1e55b39940655461b7ba3d9d60f3d711e476511ad165bcf719321cd9064459"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.8/lnk_0.1.0-bvgroup.8_darwin_amd64.tar.gz"
+      sha256 "0cb82020114ebdb840bb64d18a6944f4be1bc4c841ca30c67c5e33b5d93601ba"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.7/lnk_0.1.0-bvgroup.7_linux_arm64.tar.gz"
-      sha256 "7076b100a8d3f22869d64fdaf2b4c0c59abbb24a9437978caea70b6b2f2688a5"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.8/lnk_0.1.0-bvgroup.8_linux_arm64.tar.gz"
+      sha256 "bed484d4cebe603c4a133b04948d6b310fd9b2722debac41b69a1cb53652ec6b"
     else
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.7/lnk_0.1.0-bvgroup.7_linux_amd64.tar.gz"
-      sha256 "e4a52a4c44e18dbf994202f437f3a6d46e9f5fb9afa4cf543f050e4980f4550f"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.8/lnk_0.1.0-bvgroup.8_linux_amd64.tar.gz"
+      sha256 "778bbc0ff8dcb4088d50f959b21742f55b7389c35c5d17ad2d3526ca2a49fbe6"
     end
   end
 
