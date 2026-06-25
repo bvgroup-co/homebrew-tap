@@ -1,31 +1,37 @@
 class LinkedinLnk < Formula
   desc "Fast LinkedIn CLI for posting, reading, and messaging"
   homepage "https://github.com/bvgroup-co/lnk"
-  version "0.1.0-bvgroup.9"
+  version "0.1.0-bvgroup.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.9/lnk_0.1.0-bvgroup.9_darwin_arm64.tar.gz"
-      sha256 "07f35ce165fd4c2e29f1ad486b16344cd5716c341fc2b317d6313f36aed8479c"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.10/lnk_0.1.0-bvgroup.10_darwin_arm64.tar.gz"
+      sha256 "b3a10866f5d59b18eae26887619965433f162ab59347249cf03d7beb480230a4"
     else
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.9/lnk_0.1.0-bvgroup.9_darwin_amd64.tar.gz"
-      sha256 "0c4fb6f65b7c1f66e6fbfa5484499d696bcd4e750a3bd345fd155302d1a69171"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.10/lnk_0.1.0-bvgroup.10_darwin_amd64.tar.gz"
+      sha256 "f280dfaae58ed6ee4af85325491144b88941ba1d1a9489308a0b096b8ab20559"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.9/lnk_0.1.0-bvgroup.9_linux_arm64.tar.gz"
-      sha256 "9f39d20ebf84a95b2e5e9e32e1fc2c92aca863bfddbdd073d55028cbf10f7398"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.10/lnk_0.1.0-bvgroup.10_linux_arm64.tar.gz"
+      sha256 "2edde67f88fb082e817f351fa84e652a129609325f61647216f59e089d202d6e"
     else
-      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.9/lnk_0.1.0-bvgroup.9_linux_amd64.tar.gz"
-      sha256 "0bade8fa5640917b9fe0b3dba4027a535b27294bd5f5c914155dcdd7694f51a3"
+      url "https://github.com/bvgroup-co/lnk/releases/download/v0.1.0-bvgroup.10/lnk_0.1.0-bvgroup.10_linux_amd64.tar.gz"
+      sha256 "f9ea3829e007b35f36304fdb87d9663d981001639c48cf3155bd913e4230cca1"
     end
   end
 
   def install
-    bin.install "lnk"
+    binary = if OS.mac?
+      Hardware::CPU.arm? ? "lnk_darwin_arm64" : "lnk_darwin_amd64"
+    else
+      Hardware::CPU.arm? ? "lnk_linux_arm64" : "lnk_linux_amd64"
+    end
+
+    bin.install binary => "lnk"
   end
 
   test do
