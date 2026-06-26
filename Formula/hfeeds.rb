@@ -5,21 +5,21 @@
 class Hfeeds < Formula
   desc "Hacker feeds CLI for GitHub Trending, Hacker News, Product Hunt, Reddit, and V2EX"
   homepage "https://github.com/bvgroup-co/hacker-feeds-go-cli"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.5/hfeeds_0.4.5_darwin_amd64.tar.gz"
-      sha256 "39c21ceb6a7f2a9c609ebb7e9c80efbf3e86641234d950b76240125d4459a879"
+      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.6/hfeeds_0.4.6_darwin_amd64.tar.gz"
+      sha256 "c325f8b0b635f6d9982e022eba17202d3320357a5ff614c6955b877855be320a"
 
       define_method(:install) do
         bin.install "hfeeds"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.5/hfeeds_0.4.5_darwin_arm64.tar.gz"
-      sha256 "75c4378d4c9bd35ae8566cadc3ca244f625b028f016c08ebc90ec61adaf81635"
+      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.6/hfeeds_0.4.6_darwin_arm64.tar.gz"
+      sha256 "9953728dc0f7f5c7cf81707d44b19590146861427c1c7da6fffc887a01fe4a77"
 
       define_method(:install) do
         bin.install "hfeeds"
@@ -29,15 +29,15 @@ class Hfeeds < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.5/hfeeds_0.4.5_linux_amd64.tar.gz"
-      sha256 "4172ed70e2ca6e1f01c0012174d300e3f8e35386bcf660aa61994c9dd1235686"
+      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.6/hfeeds_0.4.6_linux_amd64.tar.gz"
+      sha256 "7459f32ee5cfbc385f9c8ff7ee34b0776fa02bcbb7eb6f774922d50ef38b40f7"
       define_method(:install) do
         bin.install "hfeeds"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.5/hfeeds_0.4.5_linux_arm64.tar.gz"
-      sha256 "22854bb4a28060d05d81fbb6b1ddc3ff4480671077dbc03aeeb9b3d59866234f"
+      url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.6/hfeeds_0.4.6_linux_arm64.tar.gz"
+      sha256 "2a10644ccdac3ccdf45f653749f78a150147bdd84eb982414ccfda92f8658020"
       define_method(:install) do
         bin.install "hfeeds"
       end
