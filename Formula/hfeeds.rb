@@ -15,12 +15,14 @@ class Hfeeds < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm?
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.4/hfeeds_0.4.4_linux_arm64.tar.gz"
       sha256 "7395997385aac07412d99a5020a8b43f895125f80994ab158c314287ce624839"
-    else
+    elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/bvgroup-co/hacker-feeds-go-cli/releases/download/v0.4.4/hfeeds_0.4.4_linux_amd64.tar.gz"
       sha256 "1c039cae0e387b26d83487bb3341949e534637ac03e59b70b34b5c1267cf9e52"
+    else
+      odie "hfeeds is only available for 64-bit Linux architectures"
     end
   end
 
